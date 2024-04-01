@@ -12,9 +12,9 @@ namespace MoreNote.MSync.Models
     public class LocalRepository
     {
         /// <summary>
-        /// 基路径，可以认为是仓库文件夹的路径
+        /// 基路径，可以认为是仓库文件夹的路径 带/
         /// </summary>
-        public string BasePath { get; set; }
+        public string? BasePath { get; set; }
         public VirtualFileSystem fileSystemServices=new LocalFileSystem();
         public string RepositoryConfigFile { get; set; }="config";
 
@@ -22,7 +22,7 @@ namespace MoreNote.MSync.Models
         {
             return BasePath + RepositoryConfigFile;
         }
-        public static LocalRepository open(string path)
+        public static LocalRepository Open(string path)
         {
             return null;
         }
@@ -36,6 +36,10 @@ namespace MoreNote.MSync.Models
             {
                 return;
             }
+            //在BasePath创建.morentoe文件夹
+
+            fileSystemServices.Directory_CreateDirectory(BasePath + ".morenote");
+
 
 
         }

@@ -18,5 +18,6 @@ namespace MoreNote.MSync.Services.FileSystem
         /// <param name="path"></param>
         /// <returns></returns>
         public bool File_Exists(string path);
+        public void Directory_CreateDirectory(string dir);
     }
 }

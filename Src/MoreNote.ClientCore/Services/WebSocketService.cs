@@ -16,6 +16,9 @@ namespace MoreNote.MSync.Services
         {
             server = new WebSocketServer("ws://0.0.0.0:8181");
         }
+
+
+
         public void Start()
         {
             server.Start(socket =>
@@ -26,8 +29,20 @@ namespace MoreNote.MSync.Services
                 {
                     Console.WriteLine(message);
                     socket.Send(message);
+
                 };
             });
         }
+
+        //接收message字符串，message是一个json，订阅的消息
+        public void OnMessage(string message)
+        {
+            //解析message
+            //根据message的类型，进行不同的操作
+
+           
+        }
+        
+
     }
 }
