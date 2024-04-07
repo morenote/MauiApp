@@ -36,9 +36,22 @@ namespace MoreNote.MSync.Models
             {
                 return;
             }
-            //在BasePath创建.morentoe文件夹
+            //如果不存在data文件夹，创建data文件夹
+            fileSystemServices.Directory_CreateDirectory(BasePath + "Data");
 
-            fileSystemServices.Directory_CreateDirectory(BasePath + ".morenote");
+            //如果不存在history文件夹，创建history文件夹
+            fileSystemServices.Directory_CreateDirectory(BasePath + "History");
+
+            //如果不存在config文件夹，创建config文件夹
+            fileSystemServices.Directory_CreateDirectory(BasePath + "Config");
+
+            //如果不存在images文件夹，创建images文件夹
+            fileSystemServices.Directory_CreateDirectory(BasePath + "Images");
+
+            //如果不存在HugeFiles文件夹，创建HugeFiles文件夹
+            fileSystemServices.Directory_CreateDirectory(BasePath + "HugeFiles");
+
+
 
 
 

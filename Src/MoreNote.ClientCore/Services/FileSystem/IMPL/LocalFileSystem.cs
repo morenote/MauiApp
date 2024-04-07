@@ -14,7 +14,11 @@ namespace MoreNote.MSync.Services.FileSystem.IMPL
         }
         public void Directory_CreateDirectory(string dir)
         {
-            Directory.CreateDirectory(dir);
+            if (!Directory.Exists(dir))
+            {
+                Directory.CreateDirectory(dir);
+            }
+           
         }
 
     }
