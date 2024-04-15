@@ -1,0 +1,3 @@
+[submodule "Src/Server"]
+	path = Src/Server
+	url = git@github.com:morenote/Server.git
