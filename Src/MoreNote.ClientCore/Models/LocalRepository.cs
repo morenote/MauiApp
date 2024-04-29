@@ -51,11 +51,32 @@ namespace MoreNote.MSync.Models
             //如果不存在HugeFiles文件夹，创建HugeFiles文件夹
             fileSystemServices.Directory_CreateDirectory(BasePath + "HugeFiles");
 
-
-
-
+        }
+        public void Commit()
+        {
 
         }
+        public void Pull()
+        {
+
+        }
+        public void Push()
+        {
+
+        }
+        public void Status()
+        {
+
+        }
+        public void GC()
+        {
+
+        }
+        public void Export()
+        {
+
+        }
+
 
     }
 }

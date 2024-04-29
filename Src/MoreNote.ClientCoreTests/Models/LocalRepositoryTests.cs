@@ -13,7 +13,7 @@ namespace MoreNote.MSync.Models.Tests
     [TestClass()]
     public class LocalRepositoryTests
     {
-        [TestMethod()]
+        [TestMethod("test of init")]
         public void InitTest()
         {
 
